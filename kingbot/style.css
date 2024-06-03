@@ -1,36 +1,59 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap');
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'open sans';
+    font-family: "Open Sans",'Tahoma';
 }
 html{
     scroll-behavior: smooth;
+
 }
 /* sección INICIO */
-/* sección INICIO */
+body{
+    box-sizing: border-box;
+    overflow: auto;
+
+}
 .inicio {
     position: relative;
     width: 100%;
     height: 100vh;
+    margin: 0;
     overflow: hidden;
+}
+section {
+    display: block;
+    unicode-bidi: isolate;
+    width: 100vw;
+    margin: 0;
+    background: linear-gradient(#000a,#000d);
+}
+.inicio{
+    background: none;
 }
 
 .background-slider {
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
+    z-index:-1;
 }
-
+.background-slider video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 .bg-video {
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: none;
+    box-sizing: border-box;
 }
 
 .bg-video.active {
@@ -49,89 +72,38 @@ html{
     z-index: -1; /* Asegura que esté detrás del contenido */
 }
 
-.background-slider {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -2; /* Asegura que esté detrás del contenido */
-    overflow: hidden;
-}
-
-.background-slider img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-    z-index: -2; /* Asegura que esté detrás del fondo negro transparente */
-}
-
-.background-slider img.active {
-    opacity: 1;
-    z-index: -1; /* Asegura que esté delante del fondo negro transparente */
-}
-
-
-.contenido {
-    max-width: 1300px;
-    margin: auto;
-}
-
-
-.background-slider img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-    z-index: -2; /* Asegura que esté detrás del fondo negro transparente */
-}
-
-.background-slider img.active {
-    opacity: 1;
-    z-index: -1; /* Asegura que esté delante del fondo negro transparente */
-}
-
-
 /* Estilos para el encabezado */
 header {
-    display: flex;
+    display: block;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
+    padding: 0;
+    color: #fff2;
+    left: 0;
+    right: 0;
+    top: 0;
 }
 
-header h1 a {
-    color: #fff;
+header a {
+    color: #fff2;
     text-decoration: none;
     letter-spacing: 3px;
+    
 }
+
 
 header h1 a:hover {
     color: #d9ff00;
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
+    top: 0;
+    right: 0;
+    margin-bottom: 10px;
 }
 
 nav ul li {
     margin: 0 15px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    padding: 5px 7px;
-    transition: .3s;
 }
 
 .navbar {
@@ -139,41 +111,56 @@ nav ul li a {
     border-bottom: 5px solid gold;
     color: #fff;
     padding: 10px 0;
-    width: 100%;
-    position: fixed;
+    margin: 0;
+    width: 100vw;
+    z-index: 997;
+    box-sizing: border-box;
+    position: absolute;
     top: 0;
-    left: 0;
-    z-index: 1000;
+    left:0 ;
+    right:0 ;
 }
 
 .navbar-container {
-    display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 1400px;
-    margin: 0 auto;
+    margin: 0 ;
     padding: 0 20px;
-    width: 100%;
+    width: 100vw;
+    box-sizing: border-box;;
 }
 
 .nav-links {
+    width: 100vw;
     list-style: none;
-    display: flex;
-    margin-right: auto;
+    margin-right: 10px;
+    gap:1rem;
+    box-sizing: border-box;
 }
 
 .nav-links li {
     margin-right: 20px;
+    display: inline;/*mod*/
+    box-sizing: border-box;
+    margin: 5px;
+    box-shadow: 0 0 15px 0 #aaaf;
+
 }
 
+
 .nav-links li a {
-    color: #fff;
+    color: #fffa;
     text-decoration: none;
-    transition: color 0.3s;
+    text-transform: uppercase;/*modi*/
+    transition: color 0.5s;
+    box-sizing: border-box;
+    font-weight: 700;
+    font-size: 1.2rem;
 }
 
 .nav-links li a:hover {
-    color: gold;
+    color: #fd9;
 }
 
 .social-icons {
@@ -198,9 +185,9 @@ nav ul li a {
 }
 
 #logo {
-    width: 300px; /* Duplica el tamaño del logo */
-    height: auto; /* Mantiene la proporción de altura */
-    margin-left: 20px;
+    width: 200px; /* Duplica el tamaño del logo */
+
+    margin-left: 10px;
 }
 .inicio .frase{
     position: absolute;
@@ -375,6 +362,9 @@ nav ul li a {
 /* VISITAS */
 .visitas{
     padding: 70px 0;
+    box-sizing: border-box;
+    background: linear-gradient(#000a,#000d);
+    color: #aaa;
 }
 .visitas .portfolio{
     display: grid;
@@ -391,7 +381,9 @@ nav ul li a {
     width: 100%;
     display: block;
     object-fit: cover;
+    border-radius: 15px;
 }
+
 .visitas .portfolio .item .info-trabajo{
     position: absolute;
     top: 0;
@@ -519,12 +511,16 @@ nav ul li a {
     opacity: 1;
     scale:1;
 }
+.contenido {
+    max-width: 1300px;
+    margin: auto;
+}
 /* SECCION CURRICULUM */
 .curriculum .contenido{
     padding: 70px 0;
 }
 .curriculum .numeros{
-    background: linear-gradient(rgba(0,0,0, 0.7), rgba(0,0,0,.7)), url(img/fondo-curriculum.png);
+    background: linear-gradient(#000a,#000d);
     height: 400px;
     width: 100%;
     background-size: cover;
@@ -803,7 +799,7 @@ footer p a:hover{
 
 /*  SECCION RESPONSIVE */
 @media screen and (max-width:1130px){
-    .trabajos .portfolio{
+    .trabajos .portfolio ,.visitas .portfolio {
         grid-template-columns: max(400px) max(400px);   
     }
 }
@@ -811,7 +807,7 @@ footer p a:hover{
     header{
         display: block;
         text-align: center;
-        background: rgba(0,0,0, 0.8);
+        background: #fff2;
     }
     nav{
         display: none;
@@ -819,7 +815,7 @@ footer p a:hover{
     .nav-responsive{
         display: flex;
     }
-    .trabajos .portfolio{
+    .trabajos .portfolio , .visitas .portfolio{
         grid-template-columns: auto  
     }
     .servicios .items-servicios{

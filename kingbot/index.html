@@ -29,6 +29,7 @@
             overflow: hidden;
             clip: rect(0, auto, auto, 0);
             z-index: 2;
+            box-sizing: border-box;
         }
         .resaltar::after {
             content: attr(data-text);
@@ -47,54 +48,55 @@
         <div class="contenido">
             <header>
                 <div class="background-slider">
-                    <video class="bg-video" src="img/1.mp4" type="video/mp4" autoplay muted loop></video>
-                    <video class="bg-video" src="img/2.mp4" type="video/mp4" autoplay muted loop></video>
-                    <video class="bg-video" src="img/3.mp4" type="video/mp4" autoplay muted loop></video>
-                    <video class="bg-video" src="img/4.mp4" type="video/mp4" autoplay muted loop></video>
+                    <video class="bg-video" title="Primer video de la visita a los colegios" src="img/1.mp4" type="video/mp4" autoplay muted loop></video>
+                    <video class="bg-video" title="Segundo video de la visita a los colegios" src="img/2.mp4" type="video/mp4" autoplay muted loop></video>
+                    <video class="bg-video" title="Tercer video de la visita a los colegios" src="img/3.mp4" type="video/mp4" autoplay muted loop></video>
+                    <video class="bg-video" title="Cuarto video de la visita a los colegios" src="img/4.mp4" type="video/mp4" autoplay muted loop></video>
                 </div>
     
-              <nav class="navbar">
-                <div class="navbar-container">
-                    <h1><a href="#"><img id="logo" src="k.svg" alt="Logo"></a></h1>
-                    <ul class="nav-links">
-                        <li><a href="#inicio">Inicio</a></li>
-                        <li><a href="#sobre-mi">Sobre Mí</a></li>
-                        <li><a href="#servicios">Capacitaciones</a></li>
-                        <li><a href="#visitas">Visitas</a></li>
-                        <li><a href="#trabajos">Competencia</a></li>
-                        <li><a href="#curriculum">Logros</a></li>
-                        <li><a href="#contacto">Contacto</a></li>
+                <nav class="navbar">
+                    <div class="navbar-container">
+                        <a href="#"><img id="logo" src="k.svg" alt="Logo"></a>
+                        
+                        <!-- Lista de enlaces -->
+                        <ul class="nav-links">
+                            <li><a href="#inicio" title="Enlace a la zona de Inicio de la pagina web">Inicio</a></li>
+                            <li><a href="#sobre-mi" title="Enlace a la zona de Informacion sobre la Empresa de la pagina web">Sobre Mí</a></li>
+                            <li><a href="#servicios" title="Enlace a la zona de Capacitaciones Ofrecidas de la pagina web">Capacitaciones</a></li>
+                            <li><a href="#visitas" title="Enlace a la zona de Visitas a los Colegios de la pagina web">Visitas</a></li>
+                            <li><a href="#trabajos" title="Enlace a zona de Participaciones en Competencias de la pagina web">Competencia</a></li>
+                            <li><a href="#curriculum" title="Enlace a zona de Logros Destacados de la pagina web">Logros</a></li>
+                            <li><a href="#contacto" title="Enlace a la zona de Informacion de contacto Empresarial de la pagina web">Contacto</a></li>
                     </ul>
                     <ul class="social-icons">
-                        <li><a href="https://web.facebook.com/profile.php?id=61556971887920" class="social-icon"><i class="fab fa-facebook"></i></a></li>
-                        <li><a href="#" class="social-icon"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#" class="social-icon"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="https://wa.me/998887099"     class="social-icon" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+                        <li><a href="https://web.facebook.com/profile.php?id=61556971887920" class="social-icon" title="Enlace a la pagina de Facebook de la Empresa" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="#" class="social-icon" title="Enlace no utilizable a la pagina de Twitter de la Empresa"><i class="fab fa-twitter" ></i></a></li>
+                        <li><a href="#" class="social-icon" title="Enlace no utilizable a la pagina de Instagram de la Empresa"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://wa.me/998887099"     class="social-icon" target="_blank" title="Enlace al WhatsApp de la Empresa"><i class="fab fa-whatsapp"></i></a></li>
                     </ul>
                 </div>
-            </nav>
-            
                 <div class="nav-responsive">
-                    <a href="#inicio">
+                    <a href="#inicio" title="Enlace a la zona de Inicio de la pagina web">
                         <i class="fa-solid fa-house"></i>
                     </a>
-                    <a href="#sobre-mi">
+                    <a href="#sobre-mi" title="Enlace a la zona de Informacion sobre la Empresa de la pagina web" >
                         <i class="fa-solid fa-user"></i>
                     </a>
-                    <a href="#servicios">
+                    <a href="#servicios"
+                title="Enlace a la zona de Visitas a los Colegios de la pagina web">
                         <i class="fa-solid fa-gear"></i>
                     </a>
-                    <a href="#trabajos">
+                    <a href="#trabajos" title="Enlace  a zona de Participaciones en Competencias de la pagina web">
                         <i class="fa-solid fa-briefcase"></i>
                     </a>
-                    <a href="#curriculum">
+                    <a href="#curriculum" title="Enlace  a zona de Logros Destacados de la pagina web">
                         <i class="fa-solid fa-square-poll-vertical"></i>
                     </a>
-                    <a href="#contacto">
+                    <a href="#contacto" title="Enlace a la zona de Informacion de contacto Empresarial de la pagina web">
                             <i class="fa-solid fa-envelope"></i>
                     </a>
                 </div>
-            </header>
+            </header >
             <header>
                 <div class="frase">
                     <h2>Hola, somos <span class="resaltar" data-text="KINGBOT">KINGBOT</span>.</h2>

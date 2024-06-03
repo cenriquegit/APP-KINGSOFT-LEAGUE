@@ -31,6 +31,22 @@ document.querySelectorAll('.social-icon').forEach(icon => {
             icon.style.color = '#fff';
         }, 1000); // Cambiar el color de vuelta a blanco después de 1 segundo
     });
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const links = document.querySelectorAll('.nav-links a');
+    
+        links.forEach(link => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault();
+                const targetId = link.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+    
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    });
 });
 
 
